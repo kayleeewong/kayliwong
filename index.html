@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kayli Wong's journey from U.S. Naval Sea Cadet recruit and researcher to healthcare finance.">
+  <meta name="theme-color" content="#071522">
+  <title>From Recruit to Researcher to Healthcare Finance</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23071522'/%3E%3Cpath d='M7 23V9h4v5h10V9h4v14h-4v-5H11v5z' fill='%2364e8d4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-meter" aria-hidden="true"><span id="scrollFill"></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Go to the beginning">
+      <span class="brand-mark">KW</span>
+      <span>Kayli Wong</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#journey">Journey</a>
+      <a href="#finance">Why finance</a>
+      <a href="#now">Now</a>
+    </nav>
+    <button class="edit-button" id="editToggle" type="button" aria-pressed="false">
+      <span class="edit-dot"></span><span class="edit-label">Edit story</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A personal journey in science, strategy, and capital</p>
+        <h1 id="hero-title" class="reveal" data-editable>From <span>Recruit</span> to <span>Researcher</span> to <span>Healthcare Finance</span></h1>
+        <p class="hero-deck reveal" data-editable>I began by asking how technology works. I kept zooming out until I was asking how innovation changes companies, markets, and patient care.</p>
+        <div class="hero-actions reveal">
+          <a class="primary-button" href="#journey">Follow the journey <span aria-hidden="true">↓</span></a>
+          <button class="soundless-motion" id="motionToggle" type="button" aria-pressed="false">Pause motion</button>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-one"><span>science</span></div>
+        <div class="orbit orbit-two"><span>strategy</span></div>
+        <div class="orbit orbit-three"><span>capital</span></div>
+        <div class="orbit-core">?</div>
+      </div>
+
+      <div class="hero-index" aria-hidden="true">
+        <span>01</span><span>06</span>
+      </div>
+    </section>
+
+    <section class="question-ribbon" aria-label="The questions that shaped my journey">
+      <p>The question kept changing</p>
+      <div class="question-window"><span id="questionText">How does it work?</span></div>
+    </section>
+
+    <section class="journey" id="journey" aria-label="Journey timeline">
+      <aside class="character-stage" aria-hidden="true">
+        <div class="character-halo"></div>
+        <img class="character" id="character" src="assets/kayli-journey.png" alt="">
+        <div class="stage-label" id="stageLabel">RECRUIT</div>
+      </aside>
+
+      <div class="timeline-wrap">
+        <div class="timeline-rail" aria-hidden="true"><span id="timelineFill"></span></div>
+
+        <article class="chapter active" data-stage="RECRUIT" data-question="How does it work?">
+          <div class="chapter-marker"><span>01</span></div>
+          <div class="chapter-card">
+            <p class="chapter-meta">High school · Starting point</p>
+            <h2 data-editable>Learning to step forward</h2>
+            <p class="chapter-lead" data-editable>I joined the U.S. Naval Sea Cadet Corps as a recruit, the Navy-oriented counterpart to ROTC. Every summer and winter brought a new training challenge and a chance to advance.</p>
+            <div class="rank-track" aria-label="Sea Cadet progression">
+              <span>Recruit</span><i></i><span>Training</span><i></i><span>Next rank</span>
+            </div>
+            <p data-editable>After completing recruit training, I could attend specialized medical and engineering programs. Experiencing both fields firsthand gave me an early look at two possible career paths and sparked my interest in where they intersect through biomedical engineering.</p>
+            <div class="tag-row"><span>Leadership</span><span>Medicine</span><span>Engineering</span></div>
+            <div class="cadet-story">
+              <div class="cadet-story-heading">
+                <p class="chapter-meta">Beyond recruit training</p>
+                <p>The program let me move from foundational discipline into hands-on career exploration while continuing to advance through new levels of responsibility.</p>
+              </div>
+              <div class="cadet-montage" aria-label="Photographs from U.S. Naval Sea Cadet training">
+                <figure class="cadet-photo cadet-photo-lead">
+                  <img src="assets/sea-cadets/recruit-training.jpeg" alt="Kayli saluting during outdoor Sea Cadet recruit training" loading="lazy">
+                  <figcaption>Recruit training</figcaption>
+                </figure>
+                <figure class="cadet-photo cadet-photo-portrait">
+                  <img src="assets/sea-cadets/cadet-portrait.jpeg" alt="Kayli wearing a USNSCC jacket during Sea Cadet training" loading="lazy">
+                  <figcaption>Becoming a cadet</figcaption>
+                </figure>
+                <figure class="cadet-photo cadet-photo-first">
+                  <img src="assets/sea-cadets/first-day.jpeg" alt="A printed photograph of Kayli in a U.S. Naval Sea Cadet Corps shirt" loading="lazy">
+                  <figcaption>The starting point</figcaption>
+                </figure>
+                <figure class="cadet-photo cadet-photo-teamwork">
+                  <img src="assets/sea-cadets/teamwork.jpeg" alt="Kayli participating in a team exercise during her first medical training" loading="lazy">
+                  <figcaption>First time at medical training</figcaption>
+                </figure>
+                <figure class="cadet-photo cadet-photo-parade">
+                  <img src="assets/sea-cadets/parade-formation.jpeg" alt="Kayli marching with a large formation of Sea Cadets in dress whites" loading="lazy">
+                  <figcaption>Moving as one</figcaption>
+                </figure>
+                <figure class="cadet-photo cadet-photo-team">
+                  <img src="assets/sea-cadets/cadet-team.jpeg" alt="Kayli standing with fellow cadets during training" loading="lazy">
+                  <figcaption>Medical training with fellow cadets</figcaption>
+                </figure>
+                <figure class="cadet-photo cadet-photo-range">
+                  <img src="assets/sea-cadets/marksmanship-training.jpeg" alt="Kayli participating in supervised Sea Cadet marksmanship training" loading="lazy">
+                  <figcaption>Engineering and weapons training in action</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter" data-stage="RESEARCHER" data-question="Can I test it?">
+          <div class="chapter-marker"><span>02</span></div>
+          <div class="chapter-card lab-card">
+            <p class="chapter-meta">10th grade summer · First laboratory</p>
+            <h2 data-editable>From equations to evidence</h2>
+            <p class="chapter-lead" data-editable>During a thin-film sputtering physics internship, I entered a real research lab for the first time. I learned to prepare samples, work with precise instrumentation, collect measurements, and interpret results that did not always behave as expected.</p>
+            <div class="lab-montage" aria-label="Photographs from the thin-film physics research internship">
+              <figure class="lab-photo lab-photo-building">
+                <img src="assets/physics-lab/physics-building.jpeg" alt="Kayli outside the Colorado State University physics building" loading="lazy">
+                <figcaption>Entering the lab</figcaption>
+              </figure>
+              <figure class="lab-photo lab-photo-measurement">
+                <img src="assets/physics-lab/measurement-setup.jpeg" alt="Kayli adjusting a laboratory measurement setup" loading="lazy">
+                <figcaption>Setting up measurements</figcaption>
+              </figure>
+              <figure class="lab-photo lab-photo-samples">
+                <img src="assets/physics-lab/sample-preparation.jpeg" alt="Kayli preparing thin-film samples at a laboratory workbench" loading="lazy">
+                <figcaption>Preparing samples</figcaption>
+              </figure>
+              <figure class="lab-photo lab-photo-instrumentation">
+                <img src="assets/physics-lab/lab-instrumentation.jpeg" alt="Kayli working beside measurement instruments and a laboratory computer" loading="lazy">
+                <figcaption>Reading the signal</figcaption>
+              </figure>
+              <figure class="lab-photo lab-photo-overview">
+                <img src="assets/physics-lab/lab-overview.jpeg" alt="Kayli operating equipment in the physics laboratory" loading="lazy">
+                <figcaption>From equipment to data</figcaption>
+              </figure>
+            </div>
+            <a class="publication-card" href="https://journals.aps.org/prapplied/abstract/10.1103/4syq-225q" target="_blank" rel="noreferrer" aria-label="Read the published paper in Physical Review Applied">
+              <div class="publication-copy">
+                <p class="publication-kicker"><span>Published research</span> Physical Review Applied · December 2025</p>
+                <h3>Ferromagnetic resonance properties of multilayered (Fe<sub>80</sub>Ga<sub>20</sub>/B)<sub>n</sub> thin films grown on LiNbO<sub>3</sub> substrates</h3>
+                <p>I am a coauthor on this paper examining how multilayer design affects ferromagnetic resonance linewidths in magnetostrictive thin films, with implications for high-sensitivity magnetic field sensing.</p>
+                <span class="paper-link">Read the paper <b aria-hidden="true">↗</b></span>
+              </div>
+              <div class="publication-image">
+                <img src="assets/physics-lab/published-paper.jpeg" alt="Physical Review Applied paper page showing Kayli Wong in the author list" loading="lazy">
+              </div>
+            </a>
+            <blockquote data-editable>Math had always helped me make sense of complex problems. In the lab, I saw quantitative thinking become tangible and contribute to a published scientific result.</blockquote>
+          </div>
+        </article>
+
+        <article class="chapter" data-stage="EXPLORER" data-question="Where else can this apply?">
+          <div class="chapter-marker"><span>03</span></div>
+          <div class="chapter-card">
+            <p class="chapter-meta">High school · Expanding the field</p>
+            <h2 data-editable>Science became bigger than one subject</h2>
+            <p class="chapter-lead" data-editable>As I joined biology and engineering clubs and followed vaccines, oncology, wearables, medical devices, and vision science, I realized that my curiosity was not confined to one discipline or technology.</p>
+            <div class="constellation" aria-label="Areas of interest">
+              <span class="node n1">Oncology</span><span class="node n2">Vaccines</span><span class="node n3">Digital health</span><span class="node n4">Medtech</span><span class="node n5">Vision science</span>
+              <i class="line l1"></i><i class="line l2"></i><i class="line l3"></i><i class="line l4"></i>
+            </div>
+            <p data-editable>Growing up near Seattle also meant being surrounded by people working in technology, engineering, and medicine. I began asking family friends and professionals what they built, which problems mattered, and how ideas reached patients. Those conversations helped me recognize that the questions energizing me were broader: not only how one technology worked, but how scientific progress, competition, adoption, and market needs shaped an entire industry.</p>
+          </div>
+        </article>
+
+        <article class="chapter" data-stage="COMPUTATION" data-question="Can data help us understand it?">
+          <div class="chapter-marker"><span>04</span></div>
+          <div class="chapter-card computation-card">
+            <p class="chapter-meta">College freshman year · Stanford</p>
+            <h2 data-editable>A quantitative path into biology</h2>
+            <p class="chapter-lead" data-editable>At college, I was still deeply curious about science, but I wanted to approach biological problems through a more quantitative lens. Biomedical Computation let me combine biology with statistics, computer science, and mathematical problem solving.</p>
+            <div class="formula" aria-label="Biomedical Computation combines biology, statistics, and computer science">
+              <span>Biology</span><b>+</b><span>Statistics</span><b>+</b><span>Computer Science</span><b>=</b><strong>Biomedical<br>Computation</strong>
+            </div>
+            <p data-editable>I could use data to find patterns, build models, and ask better questions about complex biological systems. It felt like a continuation of everything I had explored before.</p>
+            <div class="stanford-story">
+              <div class="stanford-story-heading">
+                <p class="chapter-meta">Studying at Stanford</p>
+                <p>College gave me the space to connect quantitative problem solving with the biological questions that first drew me toward healthcare.</p>
+              </div>
+              <div class="stanford-montage" aria-label="Photographs from studying at Stanford">
+                <figure class="stanford-photo">
+                  <img src="assets/stanford/stanford-portrait.jpeg" alt="Kayli standing in Stanford's Main Quad" loading="lazy">
+                  <figcaption>Beginning my studies at Stanford</figcaption>
+                </figure>
+                <figure class="stanford-photo">
+                  <img src="assets/stanford/green-library-study.jpeg" alt="Kayli studying on a laptop in Green Library at Stanford" loading="lazy">
+                  <figcaption>Studying Biomedical Computation in Green Library</figcaption>
+                </figure>
+                <figure class="stanford-photo">
+                  <img src="assets/stanford/stanford-evening.jpeg" alt="A sunset view across Stanford's campus" loading="lazy">
+                  <figcaption>Learning late into the evening</figcaption>
+                </figure>
+              </div>
+              <div class="stanford-course-strip" aria-label="Math and economics classes at Stanford">
+                <figure class="course-photo">
+                  <img src="assets/stanford/math-class.jpeg" alt="A multivariable calculus lesson at Stanford" loading="lazy">
+                  <figcaption>Math at Stanford</figcaption>
+                </figure>
+                <figure class="course-photo">
+                  <img src="assets/stanford/economics-consumption.jpeg" alt="An economics lecture on current and future consumption at Stanford" loading="lazy">
+                  <figcaption>Economics at Stanford</figcaption>
+                </figure>
+                <figure class="course-photo">
+                  <img src="assets/stanford/economics-rent-control.jpeg" alt="An economics lecture on rent control at Stanford" loading="lazy">
+                  <figcaption>Economics at Stanford</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter zoom-chapter" id="finance" data-stage="ZOOM OUT" data-question="How does innovation create value?">
+          <div class="chapter-marker"><span>05</span></div>
+          <div class="chapter-card">
+            <p class="chapter-meta">The realization · Zooming out</p>
+            <h2 data-editable>I wanted to understand the business behind the science</h2>
+            <p class="chapter-lead" data-editable>I respected the depth required to build one product, but my interests were broader than any single technology or company. I wanted to compare companies across biopharma, medical devices, healthcare services, and HCIT, and analyze the market forces shaping each vertical.</p>
+            <div class="zoom-system" aria-label="From one technology to the broader healthcare market">
+              <div class="single-tech"><span>ONE<br>TECHNOLOGY</span></div>
+              <div class="zoom-arrow"><span>zoom out</span></div>
+              <div class="market-map">
+                <span>Patients</span><span>Clinical data</span><span>Product pipelines</span><span>Regulation</span><span>Reimbursement</span><span>Valuation</span><i>HEALTHCARE<br>SECTOR</i>
+              </div>
+            </div>
+            <div class="question-grid">
+              <p data-editable>Why does one platform attract investment while another struggles to raise capital?</p>
+              <p data-editable>How do clinical trial results change projected cash flows, risk, and valuation?</p>
+              <p data-editable>When should a company pursue M&amp;A rather than build a technology internally?</p>
+              <p data-editable>What turns scientific progress into a commercial product that reaches patients?</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter finance-chapter" data-stage="FINANCE" data-question="What is it worth, and what comes next?">
+          <div class="chapter-marker"><span>06</span></div>
+          <div class="chapter-card">
+            <p class="chapter-meta">Healthcare finance · The wider lens</p>
+            <h2 data-editable>Finance connected science, strategy, and value</h2>
+            <p class="chapter-lead" data-editable>Healthcare finance let me keep the scientific curiosity that first drew me to the sector while analyzing business models, capital needs, and strategic transactions.</p>
+            <div class="finance-lenses">
+              <div><span>01</span><h3>Compare</h3><p data-editable>Evaluate companies and business models across biopharma, medical devices, healthcare services, and HCIT.</p></div>
+              <div><span>02</span><h3>Translate</h3><p data-editable>Translate clinical progress, patient populations, pricing, and product pipelines into projected cash flows and valuation.</p></div>
+              <div><span>03</span><h3>Analyze drivers</h3><p data-editable>Weigh FDA approval, reimbursement, patent protection, regulation, manufacturing, and competition.</p></div>
+              <div><span>04</span><h3>Assess options</h3><p data-editable>Assess M&amp;A, debt and equity financing, joint ventures, and partnerships under uncertainty.</p></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="now" id="now" aria-labelledby="now-title">
+      <div class="now-heading">
+        <p class="eyebrow">Where I am now</p>
+        <h2 id="now-title" data-editable>Studying the science.<br>Following the capital.</h2>
+      </div>
+      <div class="now-grid">
+        <article><span>01</span><p class="chapter-meta">Academic foundation</p><h3 data-editable>Biomedical Computation</h3><p data-editable>Building fluency across biology, computation, statistics, and quantitative modeling at Stanford.</p></article>
+        <article><span>02</span><p class="chapter-meta">Investing experience</p><h3 data-editable>Biotech research</h3><p data-editable>Evaluating scientific platforms, product pipelines, market opportunities, and investment questions through venture and public-markets work.</p></article>
+        <article><span>03</span><p class="chapter-meta">Next chapter</p><h3 data-editable>Healthcare finance</h3><p data-editable>Exploring how M&amp;A, debt and equity financing, and strategic advisory help healthcare companies fund innovation and grow.</p></article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="closing-kicker">The through line</p>
+      <h2 data-editable>What began as an interest in building and understanding technology became an interest in the businesses, markets, and transactions around it.</h2>
+      <p data-editable>My goal is to bring scientific curiosity, quantitative discipline, and a wide-angle view to healthcare M&amp;A, financing, and strategic decisions.</p>
+      <a class="primary-button light" href="#top">Return to the beginning <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <div class="edit-panel" id="editPanel" aria-live="polite">
+    <p><strong>Edit mode is on.</strong> Click any highlighted text to rewrite it.</p>
+    <div><button id="saveEdits" type="button">Save on this device</button><button id="resetEdits" type="button">Reset</button><button id="doneEditing" type="button">Done</button></div>
+  </div>
+
+  <footer><span>Kayli Wong</span><span>From Recruit to Researcher to Healthcare Finance</span><span id="year"></span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
