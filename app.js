@@ -4,14 +4,7 @@ const stageLabel = document.querySelector('#stageLabel');
 const timelineFill = document.querySelector('#timelineFill');
 const scrollFill = document.querySelector('#scrollFill');
 const character = document.querySelector('#character');
-const editToggle = document.querySelector('#editToggle');
-const editPanel = document.querySelector('#editPanel');
-const saveEdits = document.querySelector('#saveEdits');
-const resetEdits = document.querySelector('#resetEdits');
-const doneEditing = document.querySelector('#doneEditing');
 const motionToggle = document.querySelector('#motionToggle');
-const editableNodes = [...document.querySelectorAll('[data-editable]')];
-const storageKey = 'kayli-portfolio-edits-v1';
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
@@ -50,38 +43,6 @@ chapters.forEach(chapter => observer.observe(chapter));
 window.addEventListener('scroll', updateScroll, { passive: true });
 window.addEventListener('resize', updateScroll);
 updateScroll();
-
-function setEditing(enabled) {
-  document.body.classList.toggle('editing', enabled);
-  editToggle.setAttribute('aria-pressed', String(enabled));
-  editPanel.classList.toggle('open', enabled);
-  editableNodes.forEach(node => node.contentEditable = enabled ? 'true' : 'false');
-  editToggle.querySelector('.edit-label').textContent = enabled ? 'Editing' : 'Edit story';
-}
-
-editToggle.addEventListener('click', () => setEditing(!document.body.classList.contains('editing')));
-doneEditing.addEventListener('click', () => setEditing(false));
-
-saveEdits.addEventListener('click', () => {
-  const edits = editableNodes.map(node => node.innerHTML);
-  localStorage.setItem(storageKey, JSON.stringify(edits));
-  saveEdits.textContent = 'Saved';
-  setTimeout(() => saveEdits.textContent = 'Save on this device', 1400);
-});
-
-resetEdits.addEventListener('click', () => {
-  localStorage.removeItem(storageKey);
-  location.reload();
-});
-
-try {
-  const stored = JSON.parse(localStorage.getItem(storageKey));
-  if (Array.isArray(stored)) editableNodes.forEach((node, index) => {
-    if (typeof stored[index] === 'string') node.innerHTML = stored[index];
-  });
-} catch (error) {
-  localStorage.removeItem(storageKey);
-}
 
 motionToggle.addEventListener('click', () => {
   const paused = document.body.classList.toggle('motion-paused');
