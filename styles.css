@@ -43,12 +43,6 @@ button { color: inherit; }
 .primary-button { display: inline-flex; gap: 28px; align-items: center; min-height: 49px; padding: 0 20px; background: var(--teal); color: var(--ink); border-radius: 4px; text-decoration: none; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: transform .2s, background .2s; }
 .primary-button:hover { transform: translateY(-2px); background: white; }
 .soundless-motion { color: rgba(255,255,255,.62); background: transparent; border: 0; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; font-size: .8rem; }
-.hero-orbit { position: absolute; z-index: 1; right: 4vw; top: 14vh; width: min(31vw, 430px); aspect-ratio: 1; display: grid; place-items: center; opacity: .72; }
-.orbit { position: absolute; inset: 0; border: 1px solid rgba(100,232,212,.3); border-radius: 50%; animation: spin 17s linear infinite; }
-.orbit span { position: absolute; top: 10%; left: 8%; background: var(--ink); color: var(--teal); padding: 3px 8px; font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; }
-.orbit-two { inset: 18%; border-color: rgba(255,115,95,.38); animation-direction: reverse; animation-duration: 12s; }
-.orbit-three { inset: 34%; animation-duration: 8s; }
-.orbit-core { width: 42px; height: 42px; background: var(--teal); color: var(--ink); border-radius: 50%; display: grid; place-items: center; font: 700 1.25rem Georgia, serif; animation: pulse 2.4s ease-in-out infinite; }
 .hero-index { position: absolute; right: clamp(24px, 5vw, 76px); bottom: 36px; display: flex; width: 170px; justify-content: space-between; color: rgba(255,255,255,.42); font-size: .68rem; }
 .hero-index::before { content: ""; position: absolute; left: 27px; right: 27px; top: 50%; height: 1px; background: rgba(255,255,255,.2); }
 
@@ -63,6 +57,10 @@ button { color: inherit; }
 .character-stage::before { content: ""; position: absolute; inset: 6%; border: 1px solid rgba(7,21,34,.09); border-radius: 50% 50% 0 0; transform: scaleX(.8); }
 .character-halo { position: absolute; width: 26vw; max-width: 410px; aspect-ratio: 1; top: 21%; border-radius: 50%; border: 1px solid var(--teal-deep); opacity: .23; box-shadow: 0 0 0 30px rgba(22,159,154,.035), 0 0 0 60px rgba(22,159,154,.025); animation: haloPulse 5s ease-in-out infinite; }
 .character { position: relative; z-index: 2; width: min(31vw, 410px); max-height: 83%; object-fit: contain; object-position: bottom; filter: drop-shadow(0 28px 28px rgba(9, 31, 45, .18)); transform-origin: center bottom; animation: characterBreathe 4s ease-in-out infinite; transition: filter .35s; }
+.character-word { position: absolute; z-index: 4; padding: 6px 11px; border: 1px solid rgba(7,21,34,.13); border-radius: 999px; background: rgba(247,244,234,.9); box-shadow: 0 10px 30px rgba(7,21,34,.1); font-size: .62rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; backdrop-filter: blur(8px); animation: wordFloat 4.8s ease-in-out infinite; }
+.word-science { left: 7%; top: 25%; color: var(--teal-deep); }
+.word-strategy { right: 5%; top: 42%; color: var(--blue); animation-delay: -1.6s; }
+.word-capital { left: 10%; top: 57%; color: #d84d3d; animation-delay: -3.1s; }
 .stage-label { position: absolute; z-index: 3; left: clamp(18px, 3vw, 45px); bottom: 28px; padding: 7px 11px; background: var(--ink); color: var(--teal); font-size: .65rem; font-weight: 800; letter-spacing: .19em; transition: transform .35s, background .35s; }
 
 .timeline-wrap { position: relative; padding: 16vh clamp(26px, 8vw, 110px) 14vh clamp(56px, 8vw, 112px); }
@@ -222,10 +220,9 @@ body.motion-paused *, body.motion-paused *::before, body.motion-paused *::after 
 
 @keyframes revealUp { from { opacity: 0; transform: translateY(35px); } to { opacity: 1; transform: none; } }
 @keyframes gridDrift { to { transform: translate(72px,72px); } }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { 50% { transform: scale(1.12); box-shadow: 0 0 30px rgba(100,232,212,.45); } }
 @keyframes haloPulse { 50% { transform: scale(1.06); opacity: .4; } }
 @keyframes characterBreathe { 0%,100% { transform: translateY(0) rotate(-.3deg); } 50% { transform: translateY(-9px) rotate(.3deg); } }
+@keyframes wordFloat { 0%,100% { transform: translate3d(0,0,0) rotate(-1deg); } 50% { transform: translate3d(0,-11px,0) rotate(1deg); } }
 @keyframes switchQuestion { 0% { opacity: 0; transform: translateY(9px); } 100% { opacity: 1; transform: none; } }
 @keyframes railShine { 65%,100% { transform: translateX(100%); } }
 @keyframes nodeFloat { 50% { transform: translateY(-7px); } }
@@ -234,11 +231,14 @@ body.motion-paused *, body.motion-paused *::before, body.motion-paused *::after 
 @media (max-width: 900px) {
   .site-header { grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
-  .hero-orbit { width: 46vw; right: -13vw; top: 9vh; opacity: .38; }
   .journey { grid-template-columns: 1fr; }
   .character-stage { height: 270px; top: 62px; z-index: 6; align-items: flex-end; justify-content: flex-start; padding-left: 8vw; background: linear-gradient(90deg, #e9eee5, var(--paper)); border-right: 0; border-bottom: 1px solid rgba(7,21,34,.08); }
   .character-stage::before, .character-halo { display: none; }
   .character { width: 190px; max-height: 250px; }
+  .character-word { padding: 5px 9px; font-size: .57rem; }
+  .word-science { left: min(53vw, 235px); top: 38px; }
+  .word-strategy { right: 5vw; top: 105px; }
+  .word-capital { left: min(50vw, 220px); top: 170px; }
   .stage-label { left: auto; right: 24px; bottom: 24px; }
   .timeline-wrap { padding: 12vh 7vw 10vh 12vw; }
   .timeline-rail { left: 6vw; }
@@ -261,6 +261,9 @@ body.motion-paused *, body.motion-paused *::before, body.motion-paused *::after 
   .question-window { min-width: 0; }
   .character-stage { height: 220px; }
   .character { width: 155px; max-height: 205px; }
+  .word-science { left: 47vw; top: 28px; }
+  .word-strategy { right: 4vw; top: 84px; }
+  .word-capital { left: 43vw; top: 135px; }
   .chapter h2 { font-size: 2.65rem; }
   .rank-track { grid-template-columns: 1fr; gap: 5px; }
   .rank-track i { width: 2px; height: 19px; margin-left: 16px; }
